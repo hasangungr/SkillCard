@@ -1,0 +1,28 @@
+﻿@using CF_Skill_Card.Models.Class;
+@model List<Skill> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>    
+        <th>ID</th>
+        <th>Skill</th>
+        <th>Value</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.skillID</td>
+        <td>@x.skillDescription</td>
+        <td>@x.skillValue</td>
+        <td><a href="/Admin/deleteSkill/@x.skillID" class="btn btn-danger">Delete</a></td>
+        <td><a href="/Admin/updateSkill/@x.skillID" class="btn btn-success">Update</a></td>
+    </tr>
+    }
+ 
+</table>
+

@@ -1,0 +1,19 @@
+﻿@model CF_Skill_Card.Models.Class.Skill
+@{
+    ViewBag.Title = "updateSkill";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:10px">
+        <label>Skill Description</label>
+        @Html.TextBoxFor(x => x.skillDescription, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:10px">
+        <label>Skill Value</label>
+        @Html.TextBoxFor(x => x.skillValue, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Save</button>
+    </div>
+</form>
